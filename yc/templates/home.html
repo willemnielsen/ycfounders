@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>YC Founders</h1>
+    {% for founder in founders %}
+        <body>
+            {{founder.name}}:
+            {% if founder.twitter %}
+                <a href={{founder.twitter}}>
+                    twitter</a>
+            {% endif %}
+            {% if founder.linkedin %}
+                <a href={{founder.linkedin}}>
+                    linkedin
+                </a>
+            {% endif %}
+        </body>
+
+        <br>
+    {% endfor %}
+{% endblock content %}
